@@ -1,0 +1,13 @@
+
+:root {
+    --darken: rgba(0,0,0,.2);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.border-darken {
+    border: 2px solid var(--darken);
+}
