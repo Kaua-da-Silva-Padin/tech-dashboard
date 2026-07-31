@@ -18,4 +18,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run gemini.py
+        env:
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
         run: python gemini.py
