@@ -1,0 +1,21 @@
+name: Run Gemini Bot
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+
+jobs:
+  run-gemini:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+          
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run gemini.py
+        run: python gemini.py
