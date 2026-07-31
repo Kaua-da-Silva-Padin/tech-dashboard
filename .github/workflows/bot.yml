@@ -3,6 +3,7 @@ name: Run Gemini Bot
 on:
   schedule:
     - cron: '0 */3 * * *'
+  workflow_dispatch: # Enables manual triggering from the Actions tab
 
 jobs:
   run-gemini:
