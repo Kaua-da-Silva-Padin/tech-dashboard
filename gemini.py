@@ -11,4 +11,4 @@ def talk_with_gemini(query: str) -> str:
     return interaction.output_text
 
 if __name__ == '__main__':
-    print(res := talk_with_gemini('Most used programming languages, you must include at least 10 (only answer with a python style list) enter these informations inside each item on the list: usage percentage (only numbers and not with a percentage sign), name, main job that uses it and average salary for junior, mid-level and senior developers for people doing said job (never say stuff like "thank you" or anything besides just the data)'))
+    print(res := talk_with_gemini('Most used programming languages, you must include at least 10 (only answer with a python style list) enter these informations inside each item on the list: usage percentage (only numbers and not with a percentage sign), name, main job that uses it and average daily, monthly and yearly salary for junior, mid-level and senior developers for people doing said job (never say stuff like "thank you" or anything besides just the data)'))
