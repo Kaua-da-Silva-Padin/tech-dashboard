@@ -11,3 +11,23 @@
 .border-darken {
     border: 2px solid var(--darken);
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-link {
+    text-decoration: none;
+    color: white;
+    transition: 200ms ease-out;
+}
+
+.custom-link:hover {
+    opacity: 50%;
+}
+
+.bg-darken {
+    background: var(--darken);
+}

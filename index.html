@@ -13,7 +13,125 @@
         <title>Bots</title>
     </head>
     <body>
-        
+
+        <header class="mb-2 p-2 px-4 bg-primary text-light">
+            <h1>
+                <a href="#" class="custom-link">
+                    <i class="fa fa-code"></i>
+                    Yearly Tech
+                </a>
+            </h1>
+        </header>
+
+        <main class="dynamic-flex">
+            <section class="m-2">
+                <h2 class="fw-bold m-2 display-5 text-light bg-dark p-2 px-4 rounded-2">
+                    <i class="fa fa-medal text-warning"></i>
+                    Most used programming languages in <span class="currentYear"></span>
+                </h2>
+            </section>
+            
+            <div class="m-4 p-4 d-flex justify-content-center border-darken rounded-2">
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <script>
+            const ctx = document.getElementById('myChart');
+            let data = {
+                'labels': ['a', 'b'],
+                'data': [1, 2]
+            };
+
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                labels: data.labels,
+                datasets: [{
+                    label: 'Most used Programming Languages in ' + new Date().getFullYear(),
+                    data: data.data,
+                    borderWidth: 4
+                }]
+                },
+                options: {
+                scales: {
+                    y: {
+                    beginAtZero: true
+                    }
+                }
+                }
+            });
+            </script>
+
+            <section class="m-2">
+                <h2 class="fw-bold m-2 display-5 text-light bg-dark p-2 px-4 rounded-2">
+                    <i class="fa fa-info-circle text-info"></i>
+                    More on <span class="selectedLanguage"></span>
+                </h2>
+                <h4 class="m-2 p-2 rounded-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, nostrum ipsum assumenda officiis eaque, accusantium, ad esse placeat sunt magnam fuga in quibusdam earum. Laboriosam minus illum aliquam dolore molestias!
+                </h4>
+
+                <hr>
+
+                <h2 class="fw-bold m-2 display-5 text-light bg-dark p-2 px-4 rounded-2">
+                    <i class="fa fa-dollar text-success"></i>
+                    Average Salaries
+                </h2>
+
+                <table class="table table-dark table-striped">
+                    <caption class="fst-italic fw-bold p-2 bg-dark text-light">
+                        <i class="fa fa-warning text-warning"></i>
+                        Note: These will vary from country to country and/or company to company and they're only an average value.
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Junior Salary</th>
+                            <th scope="col">Mid-Level Salary</th>
+                            <th scope="col">Senior Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>[languageName]</td>
+                            <td>[juniorSalary]</td>
+                            <td>[midSalary]</td>
+                            <td>[seniorSalary]</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>[languageName]</td>
+                            <td>[juniorSalary]</td>
+                            <td>[midSalary]</td>
+                            <td>[seniorSalary]</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>[languageName]</td>
+                            <td>[juniorSalary]</td>
+                            <td>[midSalary]</td>
+                            <td>[seniorSalary]</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+            </section>
+        </main>
+
+        <footer class="bg-dark text-light p-2 mt-2">
+            <h5>
+                <i class="fa fa-code"></i>
+                Created by 
+                <i>KauãPadin &copy;</i>
+                2026-<span class="currentYear"></span>
+            </h5>
+        </footer>
 
         <script src="script.js"></script>
     </body>
